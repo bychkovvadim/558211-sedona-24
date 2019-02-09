@@ -3,7 +3,8 @@ html {
   box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 body {
-  display: block; width: 1200; height: auto; margin: 0 auto;
+  width: 1200px;
+  margin:0 auto;
 
   padding: 0;
 
@@ -45,23 +46,23 @@ a {
   color: #000000;
 }
 
-.link-item
-a:hover {
+.link-item a:hover {
   color: #81b3d2;
 }
 
-.link-item
-a:focus {
+.link-item a:focus {
+  color: #766357;
+}
+
+.link-item a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.link-item
-a:active {
-  color: #766357;
-}
 /*------------------------------Вступление фон---------------*/
 
 .intro-background {
+  position: relative;
+
   width: 1200px;
   height: 508px;
 
@@ -69,12 +70,27 @@ a:active {
               url("../img/intro-background.jpg") 50% 20% no-repeat;
 }
 
-.intro-info {
+.intro-background::after {
+  content: "";
+
+  position: absolute;
+
+  top: 15%;
+  left: 31%;
+
   width: 459px;
   height: 353px;
 
   background: url("../img/intro-info.svg") no-repeat;
+
 }
+
+/*.intro-info {
+  width: 459px;
+  height: 353px;
+
+  background: url("../img/intro-info.svg") no-repeat;
+}*/
 
 .intro-description {
   font-size: 21px;
@@ -111,6 +127,8 @@ a:active {
 }
 
 .cause-item {
+  width: 400px;
+
   background-color: #eeeeee;
 }
 
@@ -135,27 +153,36 @@ a:active {
 
 /*------------------------------Блок рекоммендации---------------*/
 
-.recommend-list {
-  list-style: none;
+.recommend-list li {
   text-align: center;
+  list-style: none;
 }
 
-.recommend-item h3 {
+.recommend-list
+.recommend-head {
   font-size: 21px;
-  font-weight: 700;
+  font-weight: bold;
+}
+
+.recommend-item {
+  width: 400px;
+
+  position: relative;
+
+  padding-top: 105px;
 }
 
 .recommend-item::before {
+  content: "";
   position: absolute;
-
-  top: center;
+  top: 0;
 }
 
 .recommend-item:nth-child(1)::before {
   width: 75px;
   height: 72px;
 
-  content: "";
+  left: 160px;
 
   background: url(../img/icon-1.svg) no-repeat;
 }
@@ -164,7 +191,7 @@ a:active {
   width: 74px;
   height: 70px;
 
-  content: "";
+  left: 162px;
 
   background: url(../img/icon-2.svg) no-repeat;
 }
@@ -173,7 +200,7 @@ a:active {
   width: 64px;
   height: 76px;
 
-  content: "";
+  left: 168px;
 
   background: url(../img/icon-3.svg) no-repeat;
 }
@@ -193,6 +220,8 @@ a:active {
 
 .search-container
 .search-btn {
+  padding: 35px 139px 33px 140px;
+
   color: #ffffff;
   text-align: center;
   font-size: 21px;
@@ -202,7 +231,9 @@ a:active {
 }
 
 .search-form {
-  background-color: rgba(0, 1, 1, 0.15);
+  width: 568px;
+
+  background-color: #ffffff;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
@@ -219,11 +250,26 @@ a:active {
 }
 
 .search-container input[value] {
-  font-family: PT Sans;
+  font-family: "PT Sans";
   font-weight: 700;
   line-height: 26px;
   color: #000000;
   text-transform: uppercase;
+}
+
+.search-container input[type="text"] {
+  width: 346px;
+
+  padding: 7px 0 7px 13px;
+}
+
+.search-container input[type="number"] {
+  width: 114px;
+  text-align: center;
+}
+
+.search-visitors {
+ display: inline-block;
 }
 
 .search-btn-caledar {
@@ -253,6 +299,8 @@ a:active {
 }
 
 .search-btn-submit {
+  padding: 17px 197px 22px 196px;
+
   color: #ffffff;
   text-align: center;
   font-size: 21px;
@@ -282,26 +330,39 @@ a:active {
 
 .social-btn {
   display: inline-block;
+}
+
+.tw-btn
+a {
+  display: inline-block;
 
   width: 46px;
   height: 48px;
 
-  background-color: #81b3d2;
+  background: #81b3d2 url(../img/logo-tw.svg) center no-repeat;
 }
 
-.social-btn
-.tw-btn {
-  background: url("../img/logo-tw.svg") no-repeat;
+.fb-btn
+a {
+  display: inline-block;
+
+  margin-left: 6px;
+  margin-right: 6px;
+
+  width: 46px;
+  height: 48px;
+
+  background: #81b3d2 url(../img/logo-fb.svg) center no-repeat;
 }
 
-.social-btn
-.fb-btn {
-  background: url("../img/logo-fb.svg") no-repeat;
-}
+.yt-btn
+a {
+  display: inline-block;
 
-.social-btn
-.yt-btn {
-  background: url("../img/logo-yt.svg") no-repeat;
+  width: 46px;
+  height: 48px;
+
+  background: #81b3d2 url(../img/logo-yt.svg) center no-repeat;
 }
 
 .copyright {
