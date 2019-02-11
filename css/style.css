@@ -1,10 +1,10 @@
 html {
   background-color: #f2f2f2;
-  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+
 }
 body {
   width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
 
   padding: 0;
 
@@ -16,6 +16,8 @@ body {
   text-transform: uppercase;
 
   background-color: #ffffff;
+
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 a {
@@ -41,17 +43,13 @@ a {
   list-style: none;
 }
 
-.link-item
-a {
+.link-item a {
   color: #000000;
 }
 
-.link-item a:hover {
-  color: #81b3d2;
-}
-
+.link-item a:hover,
 .link-item a:focus {
-  color: #766357;
+  color: #81b3d2;
 }
 
 .link-item a:active {
@@ -126,10 +124,22 @@ a {
   text-align: center;
 }
 
-.cause-item {
+.wrapper-other {
+  background-color: #eeeeee;
+}
+
+.wrapper-left {
   width: 400px;
 
-  background-color: #eeeeee;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.wrapper-right {
+  width: 400px;
+
+  order: 1;
 }
 
 .cause-item:nth-child(1) {
@@ -143,14 +153,6 @@ a {
 
   background-color: #81b3d2;
 }
-
-.cause-item:nth-child(1) img {
-
-}
-
-.cause-item:nth-child(2) img {
-}
-
 /*------------------------------Блок рекоммендации---------------*/
 
 .recommend-list li {
@@ -218,7 +220,6 @@ a {
   text-align: center;
 }
 
-.search-container
 .search-btn {
   padding: 35px 139px 33px 140px;
 
@@ -228,6 +229,17 @@ a {
   line-height: 26px;
 
   background-color: #766357;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+  background-color: #604e43;
+}
+
+.search-btn:active {
+ background-color: #503e33;
+
+ color: rgba(255, 255, 255, 0.3);
 }
 
 .search-form {
@@ -286,14 +298,14 @@ a {
 
 .search-btn-min {
   border: none;
-  color: #f2f2f2;
+  color: #000000;
 
   background-color: transparent;
 }
 
 .search-btn-plus {
   border: none;
-  color: #f2f2f2;
+  color: #000000;
 
   background-color: transparent;
 }
@@ -311,6 +323,19 @@ a {
 
   background-color: #81b3d2;
 }
+
+.search-btn-submit:hover,
+.search-btn-submit:focus {
+  background-color: #669ec0;
+}
+
+.search-btn-submit:active {
+ background-color: #5496bd;
+
+ color: rgba(255, 255, 255, 0.3);
+}
+
+
 
 /*------------------------------Карта---------------*/
 
@@ -332,8 +357,7 @@ a {
   display: inline-block;
 }
 
-.tw-btn
-a {
+.tw-btn a {
   display: inline-block;
 
   width: 46px;
@@ -342,8 +366,7 @@ a {
   background: #81b3d2 url(../img/logo-tw.svg) center no-repeat;
 }
 
-.fb-btn
-a {
+.fb-btn a {
   display: inline-block;
 
   margin-left: 6px;
@@ -355,8 +378,7 @@ a {
   background: #81b3d2 url(../img/logo-fb.svg) center no-repeat;
 }
 
-.yt-btn
-a {
+.yt-btn a {
   display: inline-block;
 
   width: 46px;
@@ -365,9 +387,40 @@ a {
   background: #81b3d2 url(../img/logo-yt.svg) center no-repeat;
 }
 
+.tw-btn a:hover,
+.tw-btn a:focus {
+  background-color: #669ec0
+}
+
+.tw-btn a:active {
+  background-color: #5496bd;
+}
+
+.fb-btn a:hover,
+.fb-btn a:focus {
+  background-color: #669ec0
+}
+
+.fb-btn a:active {
+  background-color: #5496bd;
+}
+
+.yt-btn a:hover,
+.yt-btn a:focus {
+  background-color: #669ec0
+}
+
+.yt-btn a:active {
+  background-color: #5496bd;
+}
+
 .copyright {
   line-height: 26px;
   color: #000000;
+}
+
+.copyright img {
+  fill: #000;
 }
 
 /*------------------------------Внутренняя страница---------------*/
@@ -398,15 +451,17 @@ a {
 }
 
 .filter input[type="checkbox"] {
-  width: 23px;
-  height: 23px;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
 
 .filter input[type="checkbox"]:checked {
-  width: 27px;
+  opacity: 0.5;
+}
+
+.filter input[type="checkbox"]:disabled {
+  color: #6a6a6a;
 }
 
 .filter-input:disabled + label {
@@ -434,6 +489,12 @@ a {
   border-radius: 2px;
 }
 
+.filter-btn:hover {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
 /*------------------------------Сортировка---------------*/
 
 .filters-sorting > p:nth-child(2) {
@@ -455,26 +516,55 @@ a {
 .sort-link a {
   font-size: 12px;
   line-height: 18px;
-  text-decoration: underline;
+  text-align: left;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sort-up-link {
-  width: 11px;
-  height: 10px;
+.sort-link a:hover,
+.sort-link a:focus {
+  color: #81b3d2;
+}
 
+.sort-link a:active {
+  color: #000000;
+}
+
+
+.sort-up-link {
   font-size: 0;
 
-  background: url("../img/icon-up-dir.svg") no-repeat;
+  border: 10px solid transparent;
+  border-bottom: 11px solid #cacaca;
 }
 
 .sort-down-link {
-  width: 11px;
-  height: 10px;
   font-size: 0;
 
-  background: url("../img/icon-down-dir.svg") 0 0 no-repeat;
+  border: 10px solid transparent;
+  border-top: 11px solid #cacaca;
 }
+
+.sort-down-link:hover {
+  border-top: 11px solid #000000;
+}
+
+.sort-up-link:hover {
+  border-bottom: 11px solid #000000;
+}
+
+.sort-up-link:active,
+.sort-up-link:focus {
+  border-bottom: 11px solid #81b3d2;
+}
+
+.sort-down-link:active,
+.sort-down-link:focus {
+  border-top: 11px solid #81b3d2;
+}
+
+
 
 /*------------------------------Список отфильтрованных---------------*/
 
@@ -500,24 +590,50 @@ a {
   color: #000000;
 }
 
-.hotel-more {
-  background-color: #81b3d2;
+.hotel-item a:first-child:hover {
+  color: #81b3d2;
 }
 
-.hotel-reserve {
-  background-color: #766357;
+.hotel-item a:first-child:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-more {
   padding: 8px 17px 7px 17px;
 
   color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.hotel-more:hover,
+.hotel-more:focus {
+  background-color: #669ec0;
+}
+
+.hotel-more:active {
+  background-color: #5496bd;
+
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-reserve {
   padding: 8px 16px;
 
   color: #ffffff;
+
+  background-color: #766357;
+}
+
+.hotel-reserve:hover,
+.hotel-reserve:focus {
+  background-color: #604e43;
+}
+
+.hotel-reserve:active {
+  background-color: #503e33;
+
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-score {
