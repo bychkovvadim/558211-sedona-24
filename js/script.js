@@ -28,28 +28,24 @@ searchBtn.addEventListener("click", function (evt) {
 
 buttonPlusAduits.addEventListener("click", function (evt) {
   if (!plusAduits.value > 1 || plusAduits.value < 10) {
-  evt.preventDefault();
   plusAduits.value=parseInt(document.getElementById('aduits-visitors').value)+1;
   }
 });
 
 buttonMinAduits.addEventListener("click", function (evt) {
   if (minAduits.value > 1) {
-  evt.preventDefault();
   minAduits.value=parseInt(document.getElementById('aduits-visitors').value)-1;
   }
 });
 
 buttonPlusChildren.addEventListener("click", function (evt) {
   if (! plusChildrens.value > 0 || plusChildrens.value < 10) {
-  evt.preventDefault();
-  plusChildrens.value=parseInt(document.getElementById('children-visitors').value)+1;
+   plusChildrens.value=parseInt(document.getElementById('children-visitors').value)+1;
   }
 });
 
 buttonMinChildren.addEventListener("click", function (evt) {
   if (minChildrens.value > 0) {
-  evt.preventDefault();
   minChildrens.value=parseInt(document.getElementById('children-visitors').value)-1;
   }
 });
