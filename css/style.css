@@ -162,6 +162,7 @@ input[type="checkbox"] {
   margin-left: 256px;
 
   list-style: none;
+  vertical-align: middle;
 }
 
 .social-item {
@@ -241,6 +242,7 @@ input[type="checkbox"] {
 
   background: url("../img/intro-polygon.svg") bottom no-repeat,
               url("../img/intro-background.jpg") 50% 21% no-repeat;
+  background-color: #81b3d2;
 }
 
 .intro-background::after {
@@ -329,8 +331,6 @@ input[type="checkbox"] {
 .cause-item:nth-child(1) {
   display: flex;
   order: -1;
-
-  margin-bottom: 57px;
 }
 
 .cause-item:nth-child(2){
@@ -367,6 +367,7 @@ input[type="checkbox"] {
 
   padding: 0;
   margin: 0;
+  padding-top: 57px;
   margin-bottom: 82px;
 }
 
@@ -743,6 +744,8 @@ input[type="checkbox"] {
   border: none;
 
   background-color: #81b3d2;
+
+  cursor: pointer;
 }
 
 .search-btn-submit:hover,
@@ -780,7 +783,7 @@ input[type="checkbox"] {
 
   padding: 27px 72px 31px;
 
-  background: url("../img/filter-background.jpg") no-repeat;
+  background: #81b3d2 url("../img/filte-background.jpg") no-repeat;
 }
 
 .filter fieldset {
@@ -882,6 +885,7 @@ input[type="checkbox"]:disabled + label{
 
   color: inherit;
   font: inherit;
+  vertical-align: middle;
 
   background: none;
   border: none;
@@ -1058,6 +1062,8 @@ p:nth-child(2) {
 
   margin: 0;
   padding: 0;
+
+  vertical-align: middle;
 }
 
 .filters-sorting ul{
@@ -1241,6 +1247,7 @@ p:nth-child(2) {
   color: #ffffff;
   text-align: center;
   font-weight: 700;
+  vertical-align: middle;
 
   padding: 3px 17px;
 
@@ -1263,6 +1270,7 @@ p:nth-child(2) {
   color: #ffffff;
   text-align: center;
   font-weight: 700;
+  vertical-align: middle;
 
   padding: 3px 17px;
 

@@ -57,45 +57,33 @@
           <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола в Седоне">
         </li>
         <li class="cause-item">
-          <div class="wrapper-info-other">
             <h3 class="cause-head">Небольшая площадь</h3>
             <p class="cause-number">-№3-</p>
             <p class="cause-description">Все достопримечательности находятся очень близко</p>
-          </div>
         </li>
         <li class="cause-item">
-          <div class="wrapper-info-other">
             <h3 class="cause-head">Красивая дорога</h3>
             <p class="cause-number">-№4-</p>
             <p class="cause-description">Ехать из Лас-Вегаса в Седону совсем не скучно!</p>
-          </div>
         </li>
         <li class="cause-item">
-          <div class="wrapper-info-other">
             <h3 class="cause-head">Мало туристов</h3>
             <p class="cause-number">-№5-</p>
             <p class="cause-description">Большинство едет в Гранд Каньон<br> и толпится там</p>
-          </div>
         </li>
         <li class="cause-item recommend">
           <ul class="recommend-list">
             <li class="recommend-item">
-              <div class="wrap-recommend">
               <h3 class="recommend-head">Жильё</h3>
               <p class="recommend-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </div>
             </li>
             <li class="recommend-item">
-              <div class="wrap-recommend">
               <h3 class="recommend-head">Еда</h3>
               <p class="recommend-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </div>
             </li>
             <li class="recommend-item">
-              <div class="wrap-recommend">
               <h3 class="recommend-head">Сувениры</h3>
               <p class="recommend-description">Не только китайского, но и местного производства!</p>
-              </div>
             </li>
           </ul>
         </li>
@@ -120,11 +108,11 @@
         <div class="search-column">
         <p class="search-visitors aduits-visitors">
           <label for="aduits-visitors">Взрослые:</label>
-          <button class="search-btn-min" type="button" aria-label="Убрать посетителя"><span class="visually-hidden">−</span></button><input type="number" id="aduits-visitors" name="aduits-visitors" value="2" placeholder="2" required><button class="search-btn-plus" type="button" aria-label="Добавить посетителя"><span class="visually-hidden">+</span></button>
+          <button class="search-btn-min" type="button" aria-label="Убрать посетителя"><span class="visually-hidden">−</span></button><input type="number" id="aduits-visitors" name="aduits-visitors" value="2" min="1" placeholder="2" required><button class="search-btn-plus" type="button" aria-label="Добавить посетителя"><span class="visually-hidden">+</span></button>
          </p>
         <p class="search-visitors children-visitors">
           <label for="children-visitors">Дети:</label>
-          <button class="search-btn-min" type="button" aria-label="Убрать посетителя"><span class="visually-hidden">−</span></button><input type="number" id="children-visitors" name="children-visitors" value="0" placeholder="0"><button class="search-btn-plus" type="button" aria-label="Добавить посетителя"><span class="visually-hidden">+</span></button>
+          <button class="search-btn-min" type="button" aria-label="Убрать посетителя"><span class="visually-hidden">−</span></button><input type="number" id="children-visitors" name="children-visitors" value="0" min="0" placeholder="0"><button class="search-btn-plus" type="button" aria-label="Добавить посетителя"><span class="visually-hidden">+</span></button>
         </p>
         </div>
         <button class="search-btn-submit" type="submit">Найти</button>
@@ -158,8 +146,8 @@
       </a>
     </p>
   </footer>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjipo8Gbm4ely3zvkgbpfcsPgUfG196vk&callback=initMap"></script>
   <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjipo8Gbm4ely3zvkgbpfcsPgUfG196vk&callback=initMap"></script>
   </div>
 </body>
 </html>
