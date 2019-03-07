@@ -515,12 +515,8 @@ input[type="checkbox"] {
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   z-index: 1;
-}
 
-.form-show {
-  display: none;
-
-  animation-name: index-form;
+   animation-name: index-form;
   animation-duration: 500ms;
   animation-timing-function: ease-out;
   transform-origin: 50% 0%;
@@ -548,6 +544,10 @@ input[type="checkbox"] {
     100% {
         transform: scaleY(1);
     }
+}
+
+.form-show {
+  display: none;
 }
 
 .search-container label {
