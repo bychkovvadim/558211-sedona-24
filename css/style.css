@@ -315,13 +315,6 @@ input[type="checkbox"] {
   background-color: #eeeeee;
 }
 
-.cause-description:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(6)) {
-  width: 265px;
-
-  margin: 0 auto;
-  padding-top: 7px;
-}
-
 .cause-item:nth-child(1),
 .cause-item:nth-child(2) {
   color: #ffffff;
@@ -334,9 +327,14 @@ input[type="checkbox"] {
   order: -1;
 }
 
-.cause-item:nth-child(2){
+.cause-item:nth-child(2) {
    display: inherit;
    flex-direction: row-reverse;
+}
+
+.cause-item:nth-child(1) .cause-description,
+.cause-item:nth-child(2) .cause-description {
+  width: 302px;
 }
 
 .cause-head {
@@ -355,6 +353,10 @@ input[type="checkbox"] {
 }
 
 .cause-description {
+  width: 265px;
+
+  padding: 0;
+  margin: 0 auto;
   margin-top: 21px;
 }
 
@@ -467,9 +469,11 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-.search-column {
+.wrap-visitors {
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 54px;
 }
 
 .search-btn {
@@ -565,13 +569,14 @@ input[type="checkbox"] {
   color: #000000;
   text-transform: uppercase;
 }
-
 .search-container input[type="text"] {
   display: block;
 
   width: 301px;
 
   padding: 6px 35px 6px 10px;
+
+  vertical-align: middle;
 }
 
 .search-container input[type="number"] {
@@ -579,14 +584,13 @@ input[type="checkbox"] {
   height: 36px;
 
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .search-visitors {
  position: relative;
 
  margin: 0;
- margin-bottom: 54px;
 }
 
 .search-visitors:last-child {
@@ -643,8 +647,6 @@ input[type="checkbox"] {
   background: url("../img/calendar-active.svg") no-repeat;
   outline: none;
 }
-
-
 
 .search-btn-min {
   width: 38px;
@@ -707,6 +709,24 @@ input[type="checkbox"] {
 
   background-color: #a9a9a9;
   transform: rotate(90deg);
+}
+
+.search-date input[placeholder]:hover {
+    background-color: #ebebeb;
+}
+
+.search-date input[placeholder]:focus {
+    background-color: #ffffff;
+    outline: 2px solid #e5e5e5;
+}
+
+.search-visitors input[placeholder]:hover {
+    background-color: #ebebeb;
+}
+
+.search-visitors input[placeholder]:focus {
+    background-color: #ffffff;
+    outline: 2px solid #e5e5e5;
 }
 
 .search-btn-plus:hover::before,
@@ -1189,6 +1209,8 @@ p:nth-child(2) {
 }
 
 .wrap-hotel-info {
+  width: 650px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

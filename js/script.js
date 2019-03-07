@@ -2,6 +2,7 @@ var map;
 var searchBtn = document.querySelector(".search-btn");
 var searchForm = document.querySelector(".search-form");
 var checkInDate = searchForm.querySelector("[name=check-in-date]");
+var checkOutDate = searchForm.querySelector("[name=check-out-date]");
 var buttonPlusAduits = searchForm.querySelector(".aduits-visitors .search-btn-plus");
 var buttonMinAduits = searchForm.querySelector(".aduits-visitors .search-btn-min");
 var plusAduits = document.getElementById('aduits-visitors');
@@ -25,6 +26,7 @@ searchBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchForm.classList.toggle("form-show");
   checkInDate.focus();
+  checkInDate.select();
 });
 
 buttonPlusAduits.addEventListener("click", function (evt) {
