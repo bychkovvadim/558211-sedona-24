@@ -499,7 +499,7 @@ input[type="checkbox"] {
 }
 
 .search-form {
-  display: none;
+  display: block;
 
   position: absolute;
   top: 100%;
@@ -514,7 +514,7 @@ input[type="checkbox"] {
 }
 
 .form-show {
-  display: block;
+  display: none;
 
   animation-name: index-form;
   animation-duration: 500ms;

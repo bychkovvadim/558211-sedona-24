@@ -19,12 +19,13 @@ function initMap() {
   });
 }
 
+searchForm.classList.add("form-show");
+
 searchBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchForm.classList.toggle("form-show");
   checkInDate.focus();
 });
-
 
 buttonPlusAduits.addEventListener("click", function (evt) {
   if (!plusAduits.value > 1 || plusAduits.value < 10) {
