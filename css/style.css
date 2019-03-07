@@ -641,6 +641,7 @@ input[type="checkbox"] {
 
 .search-btn-caledar:active {
   background: url("../img/calendar-active.svg") no-repeat;
+  outline: none;
 }
 
 
@@ -1193,12 +1194,10 @@ p:nth-child(2) {
   justify-content: space-between;
 }
 
-.wrap-photo {
-  margin-right: 30px;
-}
 
 .hotel-photo {
   margin: 0;
+  margin-right: 30px;
 }
 
 .hotel-photo img {
