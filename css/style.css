@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
+  word-break: break-word;
 
   background-color: #f2f2f2;
 }
@@ -329,12 +330,12 @@ input[type="checkbox"] {
 }
 
 .cause-item:nth-child(1) {
-  display: flex;
+  display: inherit;
   order: -1;
 }
 
 .cause-item:nth-child(2){
-   display: flex;
+   display: inherit;
    flex-direction: row-reverse;
 }
 
@@ -368,7 +369,7 @@ input[type="checkbox"] {
   padding: 0;
   margin: 0;
   padding-top: 57px;
-  margin-bottom: 82px;
+  padding-bottom: 82px;
 }
 
 .recommend-list li {
@@ -639,7 +640,7 @@ input[type="checkbox"] {
 }
 
 .search-btn-caledar:active {
-
+  background: url("../img/calendar-active.svg") no-repeat;
 }
 
 
@@ -783,7 +784,7 @@ input[type="checkbox"] {
 
   padding: 27px 72px 31px;
 
-  background: #81b3d2 url("../img/filte-background.jpg") no-repeat;
+  background: #81b3d2 url("../img/filter-background.jpg") no-repeat;
 }
 
 .filter fieldset {
@@ -794,7 +795,7 @@ input[type="checkbox"] {
 }
 
 .filter legend {
-  margin-right: 122px;
+  margin-right: 118px;
 
   font-size: 16px;
   text-align: left;
