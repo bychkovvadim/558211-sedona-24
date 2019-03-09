@@ -20,11 +20,11 @@ function initMap() {
   });
 }
 
-searchForm.classList.add("form-show");
+searchForm.classList.add("form-hide");
 
 searchBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
-  searchForm.classList.toggle("form-show");
+  searchForm.classList.toggle("form-hide");
   checkInDate.focus();
   checkInDate.select();
 });

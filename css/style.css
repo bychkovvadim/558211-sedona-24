@@ -117,14 +117,7 @@ input[type="checkbox"] {
 /*------------------------------Подвал---------------*/
 
 .main-footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-
   background-color: #ffffff;
-
-  padding: 35px 100px 35px 133px;
 }
 
 .index-footer {
@@ -141,11 +134,13 @@ input[type="checkbox"] {
   opacity: 0.9;
 }
 
-.column-footer {
-  display: inherit;
-  flex-grow: 1;
+.wrap-footer {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  align-content: space-between;
+  justify-content: space-between;
+
+  padding: 35px 100px 35px 133px;
 }
 
 .label-sedona {
@@ -160,7 +155,6 @@ input[type="checkbox"] {
 
   padding: 0;
   margin: 0;
-  margin-left: 256px;
 
   list-style: none;
   vertical-align: middle;
@@ -503,7 +497,8 @@ input[type="checkbox"] {
 }
 
 .search-form {
-  display: block;
+  display: flex;
+  flex-flow: column wrap;
 
   position: absolute;
   top: 100%;
@@ -516,7 +511,7 @@ input[type="checkbox"] {
 
   z-index: 1;
 
-   animation-name: index-form;
+  animation-name: index-form;
   animation-duration: 500ms;
   animation-timing-function: ease-out;
   transform-origin: 50% 0%;
@@ -546,11 +541,12 @@ input[type="checkbox"] {
     }
 }
 
-.form-show {
+.form-hide {
   display: none;
 }
 
 .search-container label {
+  width: 113px;
   line-height: 26px;
   font-weight: 700;
   vertical-align: middle;
@@ -563,7 +559,7 @@ input[type="checkbox"] {
 }
 
 .search-container input[value] {
-  font-family: "PT Sans";
+  font-family: inherit;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
@@ -573,10 +569,9 @@ input[type="checkbox"] {
   display: block;
 
   width: 301px;
+  min-height: 26px;
 
   padding: 6px 35px 6px 10px;
-
-  vertical-align: middle;
 }
 
 .search-container input[type="number"] {
@@ -658,6 +653,8 @@ input[type="checkbox"] {
   color: #000000;
   vertical-align: middle;
 
+  cursor: pointer;
+
   background-color: #f2f2f2;
 }
 
@@ -670,6 +667,8 @@ input[type="checkbox"] {
   border: none;
   color: #000000;
   vertical-align: middle;
+
+  cursor: pointer;
 
   background-color: #f2f2f2;
 }
@@ -1328,11 +1327,15 @@ p:nth-child(2) {
 
 /* Временные правила */
 
-input[type='number'] {
+input[type="number"] {
     -moz-appearance:textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+input::-ms-clear {
+   display: none;
 }
