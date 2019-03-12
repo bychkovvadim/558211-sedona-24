@@ -14,13 +14,15 @@
       <a class="logo">
         <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седоны">
       </a>
-      <ul>
+      <ul class="link-list">
         <li class="link-item">
           <a href="info.html">Информация</a>
         </li>
         <li class="link-item">
           <a href="photo-video.html">Фото и видео</a>
         </li>
+      </ul>
+      <ul class="link-list">
         <li class="link-item">
           <a href="state-map.html">Карта штата</a>
         </li>
@@ -35,59 +37,57 @@
       <h1 class="visually-hidden">Сайт о городке Седона</h1>
       <div class="intro-background">
       </div>
-      <p class="intro-description">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+      <p class="intro-description">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
     </section>
     <section class="causes">
       <h2 class="causes-head">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
-      <ol class="causes-list">
-        <li class="cause-item">
-          <div class="wrapper-info">
-            <h3 class="cause-head">Настоящий городок</h3>
-            <p class="cause-number">-№1-</p>
-            <p class="cause-description">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <img src="img/real.jpg" width="800" height="256" alt="Панорамное фото Седоны">
-        </li>
-        <li class="cause-item">
-          <div class="wrapper-info">
-            <h3 class="cause-head">Там есть мост дьявола</h3>
-            <p class="cause-number">-№2-</p>
-            <p class="cause-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </div>
-          <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола в Седоне">
-        </li>
-        <li class="cause-item">
-            <h3 class="cause-head">Небольшая площадь</h3>
-            <p class="cause-number">-№3-</p>
-            <p class="cause-description">Все достопримечательности находятся очень близко</p>
-        </li>
-        <li class="cause-item">
-            <h3 class="cause-head">Красивая дорога</h3>
-            <p class="cause-number">-№4-</p>
-            <p class="cause-description">Ехать из Лас-Вегаса в Седону совсем не скучно!</p>
-        </li>
-        <li class="cause-item">
-            <h3 class="cause-head">Мало туристов</h3>
-            <p class="cause-number">-№5-</p>
-            <p class="cause-description">Большинство едет в Гранд Каньон<br> и толпится там</p>
+      <section class="cause-item cause-photo" aria-label="Первая причина отправиться в Седону">
+        <div class="wrap-cause-info">
+          <h3>Настоящий городок</h3>
+          <span>&#8212; №1 &#8212;</span>
+          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <img src="img/real.jpg" width="800" height="256" alt="Панорамное фото Седоны">
+      </section>
+      <ul class="cause-list" aria-label="Рекоммендации при нахождении в Седоне">
+        <li class="cause-item recommend">
+          <h3>Жильё</h3>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="cause-item recommend">
-          <ul class="recommend-list">
-            <li class="recommend-item">
-              <h3 class="recommend-head">Жильё</h3>
-              <p class="recommend-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </li>
-            <li class="recommend-item">
-              <h3 class="recommend-head">Еда</h3>
-              <p class="recommend-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="recommend-item">
-              <h3 class="recommend-head">Сувениры</h3>
-              <p class="recommend-description">Не только китайского, но и местного производства!</p>
-            </li>
-          </ul>
+          <h3>Еда</h3>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-      </ol>
+        <li class="cause-item recommend">
+          <h3>Сувениры</h3>
+          <p>Не только китайского, но и местного производства!</p>
+        </li>
+      </ul>
+      <section class="cause-item cause-photo photo-rotate" aria-label="Вторая причина отправиться в Седону">
+        <div class="wrap-cause-info" >
+          <h3>Там есть мост дьявола</h3>
+          <span>&#8212; №2 &#8212;</span>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+        <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола в Седоне">
+      </section>      
+      <div class="cause-list cause-background-gray">
+        <section class="cause-item" aria-label="Третья причина отправиться в Седону">
+          <h3>Небольшая площадь</h3>
+          <span>&#8212; №3 &#8212;</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </section>
+        <section class="cause-item" aria-label="Четвертая причина отправиться в Седону">
+          <h3>Красивая дорога</h3>
+          <span>&#8212; №4 &#8212;</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+        </section>
+        <section class="cause-item" aria-label="Пятая причина отправиться в Седону">
+          <h3>Мало туристов</h3>
+          <span>&#8212; №5 &#8212;</span>
+          <p>Большинство едет в Гранд Каньон<br> и толпится там</p>
+        </section>
+      </div>      
     </section>
     <section class="search-container">
       <p>Заинтересовались?</p>
