@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style-min.css">
   <title>Гостиницы в Седоне</title>
 </head>
 <body>
@@ -16,18 +16,16 @@
       </a>
       <ul class="link-list">
           <li class="link-item">
-            <a href="info.html">Информация</a>
+            <a href="info.html" title="Информация о Седоне">Информация</a>
           </li>
           <li class="link-item">
-            <a href="photo-video.html">Фото и видео</a>
-          </li>
-        </ul>
-        <ul class="link-list">
-          <li class="link-item">
-            <a href="state-map.html">Карта штата</a>
+            <a href="photo-video.html" title="Фото и видео достопримечательностей Седоны">Фото и видео</a>
           </li>
           <li class="link-item">
-            <a href="hotels.html">Гостиницы</a>
+            <a href="state-map.html" title="Карта штата">Карта штата</a>
+          </li>
+          <li class="link-item">
+            <a class="active-link" href="hotels.html" title="Гостиницы в Седоне">Гостиницы</a>
           </li>
         </ul>
     </nav>
@@ -42,13 +40,13 @@
               <legend>Инфраструктура:</legend>
               <ul>
               <li class="filter-item-checkbox">
-                <input type="checkbox" name="pool" id="pool" checked><label for="pool">Бассейн</label>
+                <input class="checkbox" type="checkbox" name="pool" id="pool" checked><label for="pool">Бассейн</label>
               </li>
               <li class="filter-item-checkbox">
-                <input type="checkbox" name="parking" id="parking"><label for="parking">Парковка</label>
+                <input class="checkbox" type="checkbox" name="parking" id="parking"><label for="parking">Парковка</label>
               </li>
               <li class="filter-item-checkbox">
-                <input type="checkbox" name="wlan" id="wlan"><label for="wlan">Wi-Fi</label>
+                <input class="checkbox" type="checkbox" name="wlan" id="wlan"><label for="wlan">Wi-Fi</label>
               </li>
               </ul>
             </fieldset>
@@ -56,13 +54,13 @@
               <legend>Тип жилья:</legend>
               <ul>
                 <li class="filter-item-checkbox">
-                  <input type="checkbox" name="hotel" id="hotel" checked><label for="hotel">Гостиница</label>
+                  <input class="checkbox" type="checkbox" name="hotel" id="hotel" checked><label for="hotel">Гостиница</label>
                 </li>
                 <li class="filter-item-checkbox">
-                  <input type="checkbox" name="motel" id="motel" checked><label for="motel">Мотель</label>
+                  <input class="checkbox" type="checkbox" name="motel" id="motel" checked><label for="motel">Мотель</label>
                 </li>
                 <li class="filter-item-checkbox">
-                  <input type="checkbox" name="apartment" id="apartment" checked><label for="apartment">Апартаменты</label>
+                  <input class="checkbox" type="checkbox" name="apartment" id="apartment" checked><label for="apartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
@@ -87,12 +85,10 @@
         </form>
       <div class="filters-sorting">
         <h3 class="visually-hidden">Настройка сортировки</h3>
-          <div class="wrap-sorting-desc">
-            <p>Найдено: 3</p>
-            <p>Сортировка:</p>
-          </div>
+          <p>Найдено: 3</p>
           <div class="wrap-sorling-link">
-            <ul>
+            <p>Сортировка:</p>
+            <ul aria-label="Список сортировки выбранных гостиниц">
               <li class="sort-item"><a class="sort-link sort-link-active" href="#">По цене</a></li>
               <li class="sort-item"><a class="sort-link" href="#">По типу</a></li>
               <li class="sort-item"><a class="sort-link" href="#">По рейтингу</a></li>
@@ -191,7 +187,7 @@
   <footer class="main-footer">
     <h2 class="visually-hidden">Больше информации</h2>
     <div class="wrap-footer">
-      <b class="label-sedona">#VISITSEDONA</b>
+      <p class="label-sedona">#VISITSEDONA</p>
       <ul class="social-list">
         <li class="social-item">
           <a class="social-btn" href="//www.twitter.com/htmlacademy" target="_blank" title="Перейти в Twitter"><svg data-name="logo-twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#ffffff" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"></path></svg><span class="visually-hidden">Twitter</span></a>

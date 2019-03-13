@@ -3,10 +3,10 @@ var searchBtn = document.querySelector(".search-btn");
 var searchForm = document.querySelector(".search-form");
 var checkInDate = searchForm.querySelector("[name=check-in-date]");
 var checkOutDate = searchForm.querySelector("[name=check-out-date]");
-var buttonPlusAduits = searchForm.querySelector(".aduits-visitors .search-btn-plus");
-var buttonMinAduits = searchForm.querySelector(".aduits-visitors .search-btn-min");
-var plusAduits = document.getElementById('aduits-visitors');
-var minAduits = document.getElementById('aduits-visitors');
+var buttonPlusAdults = searchForm.querySelector(".adults-visitors .search-btn-plus");
+var buttonMinAdults = searchForm.querySelector(".adults-visitors .search-btn-min");
+var plusAdults = document.getElementById('adults-visitors');
+var minAdults = document.getElementById('adults-visitors');
 var buttonPlusChildren = searchForm.querySelector(".children-visitors .search-btn-plus");
 var buttonMinChildren = searchForm.querySelector(".children-visitors .search-btn-min");
 var plusChildrens = document.getElementById('children-visitors');
@@ -20,24 +20,55 @@ function initMap() {
   });
 }
 
+try {
+  storage = localStorage.getItem("checkInDate");
+  storage = localStorage.getItem("checkOutDate");
+} catch (err) {
+  isStorageSupport = false;
+}
+
 searchForm.classList.add("form-hide");
 
 searchBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
+  searchForm.classList.remove("form-error");
   searchForm.classList.toggle("form-hide");
   checkInDate.focus();
   checkInDate.select();
 });
 
-buttonPlusAduits.addEventListener("click", function (evt) {
-  if (!plusAduits.value > 1 || plusAduits.value < 10) {
-  plusAduits.value=parseInt(document.getElementById('aduits-visitors').value)+1;
+searchForm.addEventListener("submit", function (evt) {
+  if (!checkInDate.value || !checkOutDate.value) {
+    evt.preventDefault();
+    searchForm.classList.remove("form-error");
+    searchForm.offsetWidth = searchForm.offsetWidth;
+    searchForm.classList.add("form-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("checkInDate", checkInDate.value);
+      localStorage.setItem("checkOutDate", checkOutDate.value);
+  }
   }
 });
 
-buttonMinAduits.addEventListener("click", function (evt) {
-  if (minAduits.value > 1) {
-  minAduits.value=parseInt(document.getElementById('aduits-visitors').value)-1;
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (searchForm.classList.contains("search-form")) {
+      searchForm.classList.add("form-hide");
+    }
+  }
+});
+
+buttonPlusAdults.addEventListener("click", function (evt) {
+  if (!plusAdults.value > 1 || plusAdults.value < 10) {
+  plusAdults.value=parseInt(document.getElementById('adults-visitors').value)+1;
+  }
+});
+
+buttonMinAdults.addEventListener("click", function (evt) {
+  if (minAdults.value > 1) {
+  minAdults.value=parseInt(document.getElementById('adults-visitors').value)-1;
   }
 });
 
