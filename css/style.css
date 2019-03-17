@@ -1260,9 +1260,8 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-
 
 .hotel-photo {
   flex-shrink: 0;
@@ -1277,14 +1276,26 @@ input[type="checkbox"] {
 
 .wrap-type-cost {
   width: 182px;
+  margin-bottom: 13px;
+
   display: flex;
+
+  flex-grow: 1;
   justify-content: space-between;
+}
+
+.hotel-type {
+  max-width: 550px;
+}
+
+.hotel-price {
+  padding-left: 20px;
 }
 
 .wrap-rating {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   margin-left: 20px;
 
@@ -1301,10 +1312,12 @@ input[type="checkbox"] {
 
 .hotels-list h3 {
   margin: 0;
+  margin-bottom: 9px;
+  margin-top: -5px;
 
   font-size: 21px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 26px;
 }
 
 
@@ -1318,15 +1331,17 @@ input[type="checkbox"] {
 }
 
 .hotel-more {
+  width: 100px;
+
   display: inline-block;
 
   color: #ffffff;
   text-align: center;
   font-weight: 700;
-  vertical-align: middle;
+  vertical-align: top;
 
   margin-right: 2px;
-  padding: 3px 17px;
+  padding: 3px 5px;
 
   background-color: #81b3d2;
 }
@@ -1342,15 +1357,17 @@ input[type="checkbox"] {
 }
 
 .hotel-reserve {
+  width: 132px;
+
   display: inline-block;
 
   color: #ffffff;
   text-align: center;
   font-weight: 700;
-  vertical-align: middle;
+  vertical-align: top;
 
   margin-right: 6px;
-  padding: 3px 17px;
+  padding: 3px 5px;
 
   background-color: #766357;
 }
@@ -1367,11 +1384,13 @@ input[type="checkbox"] {
 }
 
 .hotel-score {
-  padding: 2px 14px;
+  width: 100px;
+
+  padding: 2px 5px;
   margin: 0;
 
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
   color: #666666;
 
   background-color: #f2f2f2;
@@ -1379,4 +1398,5 @@ input[type="checkbox"] {
 
 .hotel-stars {
   margin: 0;
+  margin-bottom: 43px;
 }
