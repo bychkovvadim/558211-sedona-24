@@ -5,16 +5,16 @@ var checkInDate = searchForm.querySelector("[name=check-in-date]");
 var checkOutDate = searchForm.querySelector("[name=check-out-date]");
 var buttonPlusAdults = searchForm.querySelector(".adults-visitors .search-btn-plus");
 var buttonMinAdults = searchForm.querySelector(".adults-visitors .search-btn-min");
-var plusAdults = document.getElementById('adults-visitors');
-var minAdults = document.getElementById('adults-visitors');
+var plusAdults = document.getElementById("adults-visitors");
+var minAdults = document.getElementById("adults-visitors");
 var buttonPlusChildren = searchForm.querySelector(".children-visitors .search-btn-plus");
 var buttonMinChildren = searchForm.querySelector(".children-visitors .search-btn-min");
-var plusChildrens = document.getElementById('children-visitors');
-var minChildrens = document.getElementById('children-visitors');
+var plusChildrens = document.getElementById("children-visitors");
+var minChildrens = document.getElementById("children-visitors");
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {lat: 34.871002, lng: -111.760826},
+    center: { lat: 34.871002, lng: -111.760826 },
     zoom: 9,
     disableDefaultUI: true
   });
@@ -47,7 +47,7 @@ searchForm.addEventListener("submit", function (evt) {
     if (isStorageSupport) {
       localStorage.setItem("checkInDate", checkInDate.value);
       localStorage.setItem("checkOutDate", checkOutDate.value);
-  }
+    }
   }
 });
 
@@ -60,26 +60,26 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-buttonPlusAdults.addEventListener("click", function (evt) {
+buttonPlusAdults.addEventListener("click", function () {
   if (!plusAdults.value > 1 || plusAdults.value < 10) {
-  plusAdults.value=parseInt(document.getElementById('adults-visitors').value)+1;
+    plusAdults.value = parseInt(document.getElementById("adults-visitors").value) + 1;
   }
 });
 
-buttonMinAdults.addEventListener("click", function (evt) {
+buttonMinAdults.addEventListener("click", function () {
   if (minAdults.value > 1) {
-  minAdults.value=parseInt(document.getElementById('adults-visitors').value)-1;
+    minAdults.value = parseInt(document.getElementById("adults-visitors").value) - 1;
   }
 });
 
-buttonPlusChildren.addEventListener("click", function (evt) {
-  if (! plusChildrens.value > 0 || plusChildrens.value < 10) {
-   plusChildrens.value=parseInt(document.getElementById('children-visitors').value)+1;
+buttonPlusChildren.addEventListener("click", function () {
+  if (!plusChildrens.value > 0 || plusChildrens.value < 10) {
+    plusChildrens.value = parseInt(document.getElementById("children-visitors").value) + 1;
   }
 });
 
-buttonMinChildren.addEventListener("click", function (evt) {
+buttonMinChildren.addEventListener("click", function () {
   if (minChildrens.value > 0) {
-  minChildrens.value=parseInt(document.getElementById('children-visitors').value)-1;
+    minChildrens.value = parseInt(document.getElementById("children-visitors").value) - 1;
   }
 });
